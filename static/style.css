@@ -1,0 +1,34 @@
+.background {
+    background-image: url('image-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center-element {
+    text-align: center;
+}
+
+.space{
+    padding: 0px !important;
+}
+
+.left {
+    margin-left: 15px;
+}
+
+.element-width {
+    width: 200px;
+}
+
+.form-set {
+    height: 100vh;
+    width: 332px;
+    padding: 30px;
+    background-color: white;
+}
+
+#Mileage {
+    color: red;
+    font-weight: bold;
+}
