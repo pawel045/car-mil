@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import func
+import os
 
 app = Flask(__name__)
 
@@ -39,4 +40,5 @@ def get_prediction():
 
 if __name__ == '__main__':
     func.load_saved_components()
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
