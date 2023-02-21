@@ -2,7 +2,11 @@ import json
 import pickle
 import numpy as np
 
-__brands = []
+__brands = ["acura", "alfa romeo", "audi", "bmw", "buick", "cadillac", "chery", "chevrolet", "chrysler", "citroen",
+"dacia", "daewoo", "dodge", "fiat", "ford", "geely", "great wall", "honda", "hyundai", "infiniti", "iveco", "jaguar",
+"jeep", "kia", "lada", "lancia", "land rover", "lexus", "lifan", "lincoln", "mazda", "mercedes-benz", "mini",
+"mitsubishi", "nissan", "opel", "peugeot", "pontiac", "porsche", "renault", "rover", "saab", "seat", "skoda",
+"ssangyong", "subaru", "suzuki", "toyota", "volkswagen", "volvo"]
 __engines = None
 __data_columns = None
 __model = None
@@ -46,18 +50,18 @@ def load_saved_components():
     global __model
 
     # check directory
-    with open('./components/values.json', 'r') as f:
+    with open('components/values.json', 'r') as f:
         __engines = json.load(f)['engines']
 
-    with open('./components/columns.json', 'r') as f:
+    with open('components/columns.json', 'r') as f:
         columns = json.load(f)['data_columns']
         __data_columns = columns
-        lower_brand = columns[4:]
+        # lower_brand = columns[4:]
+        #
+        # for brand in lower_brand:
+        #     __brands.append(brand.title())
 
-        for brand in lower_brand:
-            __brands.append(brand.title())
-
-    with open('./components/cars.pickle', 'rb') as f:
+    with open('components/cars.pickle', 'rb') as f:
         __model = pickle.load(f)
 
     print('loading complete')

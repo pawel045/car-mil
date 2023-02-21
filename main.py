@@ -3,6 +3,7 @@ import func
 import os
 
 app = Flask(__name__)
+brands = func.get_brands()
 
 
 @app.route('/')
@@ -13,7 +14,7 @@ def main():
 @app.route('/api/get_brands')
 def get_brands():
     response = jsonify({
-        'brands': func.get_brands()
+        'brands': brands
     })
     return response
 
