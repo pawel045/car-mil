@@ -1,6 +1,6 @@
 # 🚙💨 Car's mileage
 
-The application is used to check the mileage in a car based on a predictive model. The app is based on Flask.
+The application is used to check the mileage in a car based on a predictive model. The app is based on Flask. In Model.ipynb you can see how the predictive model was created.
 
 ## ⬇️ Run locally
 
